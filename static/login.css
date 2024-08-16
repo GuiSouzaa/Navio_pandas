@@ -1,0 +1,63 @@
+body {
+    background-image: url('/static/imagens/naviofund.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.container {
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 15vw;
+    height: 20vh;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+    color: #ffff;
+}
+
+input[type="password"], button {
+    display: block;
+    width: 90%;
+    padding: 15px;
+    margin: 13px 0;
+    border: 1px;
+    border-radius: 4px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    outline: none;
+}
+
+button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 90%;
+    padding: 8px;
+    border: 1px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 18px;
+    margin: 20px;
+}
+
+button:hover {
+    background-color: #a7a7a7;
+}
+
+.erro_senha {
+    color: red;
+    margin-top: -10px; /* Ajuste a margem conforme necessário */
+    margin-bottom: 20px; /* Ajuste a margem conforme necessário */
+    font-size: 14px;
+    text-align: center;
+}

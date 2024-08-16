@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='imagens/favicon.png') }}">
+    <title>Login - AlimentaMax</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Bem-vindo!</h1>
+       <form action="/" method="POST">
+        <input type="password" name="senha" placeholder="Digite a sua senha" required>
+        <button type="submit">Acessar</button>
+        {% if mensagem %}
+            <p class="erro_senha">{{ mensagem }}</p>
+        {% endif %}
+       </form>
+    </div>
+</body>
+</html>
