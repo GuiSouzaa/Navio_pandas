@@ -4,16 +4,16 @@ import io
 
 app = Flask(__name__)
 app.secret_key = 'sua_chave_secreta'  # Defina uma chave secreta para sessões, se necessário
-ALLOWED_EXTENSIONS = {'xlsx'}
+tipo_de_planilha = {'xlsx'}
 
 def allowed_file(filename):
-    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in tipo_de_planilha
 
 @app.route('/', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         senha = request.form['senha']
-        if senha == 'g':  # Senha alterada para 'g'
+        if senha == '1':
             return redirect(url_for('upload'))
         else:
             return render_template('login.html', mensagem='Senha incorreta')
